@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+  .row{
+    margin: 0px;
+  }
+
+  
+  .form-row div{
+    padding: 5%;
+  }
+  .form-row div form{
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+  .form-row div:nth-child(1){
+    background-color: steelblue;
+    color: #fff;
+  }
+  .form-row div:nth-child(2){
+    background-color: blue;
+    color: #fff;
+  }
+
+
+
+body{
+    background-color: steelblue;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Nav bar */
+
+header nav {
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+header nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 5px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+nav img {
+    position: absolute;
+    width: 80px;
+    top: 5%;
+    left: 5%;
+}
+
+/* Main container*/
+
+.container{
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+
+.container a{
+ text-decoration: none;
+ color: lightblue;   
+}
+
+/* Btn to access registered list*/
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+.btn a {
+    color: black;
+}
+
+
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control input:focus, 
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+main p {
+    text-align: center;
+}
+
+main p a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+footer, footer p {
+    margin: 0;
+    padding: 0;
+
+}
+
+footer a{
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.table {
+    color: #fff;
+}
