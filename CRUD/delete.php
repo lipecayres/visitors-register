@@ -6,7 +6,7 @@ if( isset($_GET["id"]) ) {
     $server = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "curiousgame";
+    $dbname = "visitors_register_db";
 
     // create connection
     $connection = new mysqli($server, $username, $password, $dbname);
