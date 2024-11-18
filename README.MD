@@ -37,9 +37,11 @@ This application is hosted online, so you can access it directly without any set
 
 1. **Register**:
    - Add your name and city to create a new record.
-2. **Edit**:
+2. **View**:
+   - Browse through the list of registered visitors.
+3. **Edit**:
    - Modify your entry if you are a registered user.
-3. **Delete**:
+4. **Delete**:
    - Remove your entry when no longer needed (registered users only).
 
 ---
