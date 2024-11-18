@@ -10,11 +10,11 @@ require 'database.php';
 $sql = "SELECT user_id FROM phpadmins WHERE username = '$username' AND password = '$password'";
 $result = $conn->query($sql);
 //store the number of results in a variable
-$count = $result -> rowCount();
+$count = $result->rowCount();
 //check if any matches found
-if ($count == 1){
+if ($count == 1) {
 	//echo 'Logged in Successfully.';
-	foreach  ($result as $row){
+	foreach ($result as $row) {
 		//access the existing session created automatically by the server
 		session_start();
 		//take the user's id from the database and store it in a session variable
@@ -22,8 +22,7 @@ if ($count == 1){
 		//redirect the user
 		Header('Location: ../CRUD/read.php');
 	}
-}
-else {
+} else {
 	echo 'Invalid Login';
 }
 $conn = null;
