@@ -1,12 +1,12 @@
-<?php 
+<?php
 
-if( isset($_GET["id"]) ) {
+if (isset($_GET["id"])) {
     $id = $_GET["id"];
 
-    $server = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "visitors_register_db";
+    $server = "sql303.infinityfree.com";
+    $username = "if0_37732471";
+    $password = "rP0KG4H1ExfrPMv";
+    $dbname = "if0_37732471_visitors_register_db";
 
     // create connection
     $connection = new mysqli($server, $username, $password, $dbname);

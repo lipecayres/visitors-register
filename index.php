@@ -7,8 +7,8 @@ require './inc/header.php';
     <br>
 
     <h2>Visitors</h2>
-    <a class="btn btn-primary" href="create_X.php" role="button">New visitor</a>
-    <a href="login_X.php" class="btn btn-primary login">Login</a>
+    <a class="btn btn-primary front-button" href="create_X.php" role="button">New visitor</a>
+    <a href="login_X.php" class="btn btn-primary login front-button">Login</a>
     <br>
     <table class='table'>
         <thead>
@@ -20,10 +20,10 @@ require './inc/header.php';
         <tbody>
             <?php
 
-            $server = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "visitors_register_db";
+    $server = "sql303.infinityfree.com";
+    $username = "if0_37732471";
+    $password = "rP0KG4H1ExfrPMv";
+    $dbname = "if0_37732471_visitors_register_db";
 
             // create connection
             $connection = new mysqli($server, $username, $password, $dbname);

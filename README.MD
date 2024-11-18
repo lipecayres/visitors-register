@@ -4,7 +4,7 @@ The **Visitors Register** is a simple and efficient check-in website that allows
 Registered users can also edit or delete their entries, offering an easy way to manage visitor information online.
 
 
-Accecc here: http://www.visitors-register-fsc.wuaze.com/
+Access here: http://www.visitors-register-fsc.wuaze.com/
 ## Table of Contents
 
 - [Features](#features)
