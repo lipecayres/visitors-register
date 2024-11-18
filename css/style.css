@@ -36,28 +36,6 @@ body{
 
 }
 
-/* Nav bar */
-
-header nav {
-    font-weight: bold;
-    font-size: 50px;
-    margin-top: 30px;
-}
-
-header nav ul {
-    display: inline-block;
-    list-style-type: none;
-    margin: 5px;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
-nav img {
-    position: absolute;
-    width: 80px;
-    top: 5%;
-    left: 5%;
-}
-
 /* Main container*/
 
 .container{
@@ -90,10 +68,9 @@ nav img {
     color: black;
 }
 
-/* Table*/
-
-table {
-    margin: 1rem auto;
+.front-button {
+    margin-top: 4px;
+    color: white !important;
 }
 
 
@@ -101,7 +78,7 @@ table {
 
 .form-control{
     position: relative;
-    margin: 5px 0 10px;
+    margin: 10px 0 10px;
     width: 300px;
 }
 
@@ -153,7 +130,7 @@ main p a {
 footer, footer p {
     margin: 0;
     padding: 0;
-
+    
 }
 
 footer a{
@@ -161,6 +138,8 @@ footer a{
     color: aquamarine;
 }
 
+/* Table*/
 .table {
     color: #fff;
+    margin: 1rem auto;
 }
