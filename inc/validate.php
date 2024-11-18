@@ -1,29 +1,43 @@
 <?php
-//store the user inputs in variables and hash the password
-$username = $_POST['username'];
-$password = hash('sha512', $_POST['password']);
+// Start session
+session_start();
 
-//connect to db
+// Store the user inputs in variables
+$username = $_POST['username'];
+$password = $_POST['password']; // Plain text password from the form
+
+// Connect to the database
 require 'database.php';
 
-//set up and run the query
-$sql = "SELECT user_id FROM phpadmins WHERE username = '$username' AND password = '$password'";
-$result = $conn->query($sql);
-//store the number of results in a variable
-$count = $result->rowCount();
-//check if any matches found
-if ($count == 1) {
-	//echo 'Logged in Successfully.';
-	foreach ($result as $row) {
-		//access the existing session created automatically by the server
-		session_start();
-		//take the user's id from the database and store it in a session variable
-		$_SESSION['user_id'] = $row['user_id'];
-		//redirect the user
-		Header('Location: ../CRUD/read.php');
+try {
+	// Set up the query to find the user by username
+	$sql = "SELECT user_id, password FROM phpadmins WHERE username = :username";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindParam(':username', $username);
+	$stmt->execute();
+
+	// Fetch the user data
+	$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+	if ($user) {
+		// Verify the plain text password with the hashed password in the database
+		if (password_verify($password, $user['password'])) {
+			// Password is correct, log the user in
+			$_SESSION['user_id'] = $user['user_id']; // Store user ID in session
+			Header('Location: ../CRUD/read.php'); // Redirect to the protected page
+			exit;
+		} else {
+			// Invalid password
+			echo 'Invalid Login: Incorrect password.';
+		}
+	} else {
+		// No user found with the provided username
+		echo 'Invalid Login: Username does not exist.';
 	}
-} else {
-	echo 'Invalid Login';
+} catch (PDOException $e) {
+	echo 'Error: ' . $e->getMessage();
 }
+
+// Close the database connection
 $conn = null;
 ?>
